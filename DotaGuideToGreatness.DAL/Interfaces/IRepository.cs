@@ -1,4 +1,5 @@
-﻿using DotaGuideToGreatness.Domain.Entities;
+﻿using DotaGuideToGreatness.Domain;
+using DotaGuideToGreatness.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,18 @@ namespace DotaGuideToGreatness.DAL.Interfaces
 {
     public interface IRepository<T> where T : BaseEntity
     {
-        Task<T> Add(T entity);
-        void Delete(T entity);
-        void Update(T entity);
-        Task<IList<T>> List(Expression<Func<T, bool>> expression = null,
+        Task<Result<T>> Add(T entity);
+        Task<Result> AddRange(IEnumerable<T> entities);
+
+
+        Result DeleteEntity(T entity);
+        Task<Result> DeleteById(long id);
+
+        Result Update(T entity);
+
+        Task<Result<T>> GetById(int id);
+        Task<Result<IList<T>>> List(Expression<Func<T, bool>> expression = null,
                             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
                             List<string> includes = null);
-
-
-        Task<T> GetById(int id);
-
     }
 }

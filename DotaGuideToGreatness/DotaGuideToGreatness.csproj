@@ -11,10 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\DotaGuideToGreatness.BusinessLogic\DotaGuideToGreatness.BusinessLogic.csproj" />
     <ProjectReference Include="..\DotaGuideToGreatness.DAL\DotaGuideToGreatness.DAL.csproj" />
   </ItemGroup>
 

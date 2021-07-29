@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotaGuideToGreatness.Domain.Entities
+namespace DotaGuideToGreatness.BusinessLogic.Interfaces
 {
-    public class Item : BaseEntity
+    public interface IItemsManager
     {
-
     }
 }

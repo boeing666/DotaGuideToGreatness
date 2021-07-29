@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaGuideToGreatness", "DotaGuideToGreatness\DotaGuideToGreatness.csproj", "{466B6F06-130D-4BFF-B658-4802A3B5FCBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaGuideToGreatness", "DotaGuideToGreatness\DotaGuideToGreatness.csproj", "{466B6F06-130D-4BFF-B658-4802A3B5FCBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaGuideToGreatness.Domain", "DotaGuideToGreatness.Domain\DotaGuideToGreatness.Domain.csproj", "{02E9822B-9C2F-4CCA-976D-BE792B5A954E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaGuideToGreatness.Domain", "DotaGuideToGreatness.Domain\DotaGuideToGreatness.Domain.csproj", "{02E9822B-9C2F-4CCA-976D-BE792B5A954E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaGuideToGreatness.DAL", "DotaGuideToGreatness.DAL\DotaGuideToGreatness.DAL.csproj", "{F673E945-1FDA-4007-A717-474F6AF653BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaGuideToGreatness.DAL", "DotaGuideToGreatness.DAL\DotaGuideToGreatness.DAL.csproj", "{F673E945-1FDA-4007-A717-474F6AF653BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaGuideToGreatness.BusinessLogic", "DotaGuideToGreatness.BusinessLogic\DotaGuideToGreatness.BusinessLogic.csproj", "{ED5C1DAC-894A-49FD-80C6-0D8EA9E84448}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F673E945-1FDA-4007-A717-474F6AF653BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F673E945-1FDA-4007-A717-474F6AF653BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F673E945-1FDA-4007-A717-474F6AF653BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED5C1DAC-894A-49FD-80C6-0D8EA9E84448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED5C1DAC-894A-49FD-80C6-0D8EA9E84448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED5C1DAC-894A-49FD-80C6-0D8EA9E84448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED5C1DAC-894A-49FD-80C6-0D8EA9E84448}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
