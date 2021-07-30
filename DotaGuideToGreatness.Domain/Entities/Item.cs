@@ -11,7 +11,7 @@ namespace DotaGuideToGreatness.Domain.Entities
     {
         public string Description { get; set; }
         public ItemTier Tier { get; set; }
-        public List<Item> AssambleRequirements { get; set; }
+        public Recipe Recipe { get; set; }
 
     }
 }
