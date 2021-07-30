@@ -14,8 +14,12 @@ namespace DotaGuideToGreatness.Domain.Entities
         public int Damage { get; set; }
         public int Armor { get; set; }
 
+        public double StrengthGain { get; set; }
+        public double AgilityGain { get; set; }
+        public double IntelligenceGain { get; set; }
+
         public List<Spell> Spells { get; set; }
-        public List<Item> Inventory { get; set; }
-        public GainPerLevel Gain { get; set; }
+
+        //public List<Item> Inventory { get; set; }
     }
 }

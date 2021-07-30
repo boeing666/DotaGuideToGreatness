@@ -6,5 +6,8 @@
         public bool Ultimate { get; set; }
         public double ManaCost { get; set; }
         public double CoolDown  { get; set; }
+
+        public Hero Hero { get; set; }
+        public long HeroId { get; set; }
     }
 }

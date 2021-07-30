@@ -8,8 +8,5 @@ namespace DotaGuideToGreatness.Domain.Entities
 {
     public class GainPerLevel : BaseEntity
     {
-        public double StrengthGain { get; set; }
-        public double AgilityGain { get; set; }
-        public double IntelligenceGain { get; set; }
     }
 }

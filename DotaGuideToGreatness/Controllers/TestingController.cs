@@ -13,11 +13,11 @@ namespace DotaGuideToGreatness.Controllers
     [Route("api/[controller]")]
     public class TestingController : ControllerBase
     {
-        private readonly IItemsManager _itemsManager;
+        private readonly IHeroesManager _heroesManager;
 
-        public TestingController(IItemsManager itemsManager)
+        public TestingController(IHeroesManager heroesManager)
         {
-            _itemsManager = itemsManager;
+            _heroesManager = heroesManager;
         }
 
 
@@ -25,7 +25,7 @@ namespace DotaGuideToGreatness.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetItem(long id)
         {
-            var result = await _itemsManager.GetItemById(id);
+            var result = await _heroesManager.GetItemById(id);
 
             if (result.StatusCode == StatusCodes.NotFound)
                 return NotFound();
@@ -38,14 +38,55 @@ namespace DotaGuideToGreatness.Controllers
 
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddItem(Item item)
+        public async Task<IActionResult> AddItem(Hero hero)
         {
-            var result = await _itemsManager.AddNewItem(item);
+            var result = await _heroesManager.AddNewHero(hero);
 
             if (result.Succeed)
                 return Ok(result.Payload);
 
             return BadRequest(result.Message);
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Test()
+        {
+            var hero = new Hero
+            {
+                Id = 0,
+                Name = "Test",
+                StartingHealth = 560,
+                StartingMana = 291,
+                Damage = 50,
+                Armor = 3,
+                StrengthGain = 2.2,
+                AgilityGain = 1.5,
+                IntelligenceGain = 3.5,
+                MainAttribute = Domain.Enums.Hero.Attributes.Intelligence,
+                Spells = new List<Spell>
+                {
+                    new Spell
+                    {
+                        CoolDown = 1,
+                        Description = "Testing Discrio",
+                        HeroId = 0,
+                        Id = 0,
+                        Name = "TestName"
+                    },
+                    new Spell
+                    {
+                        CoolDown = 1,
+                        Description = "Testing Discrio",
+                        HeroId = 0,
+                        Id = 0,
+                        Name = "TestName"
+                    }
+                }
+            };
+
+            var result = await _heroesManager.AddNewHero(hero);
+            return Ok();
         }
 
     }
