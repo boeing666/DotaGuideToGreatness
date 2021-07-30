@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotaGuideToGreatness.Domain.Enums.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,9 @@ namespace DotaGuideToGreatness.Domain.Entities
 {
     public class Item : BaseEntity
     {
+        public string Description { get; set; }
+        public ItemTier Tier { get; set; }
+        public List<Item> AssambleRequirements { get; set; }
 
     }
 }

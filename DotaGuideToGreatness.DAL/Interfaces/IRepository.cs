@@ -19,7 +19,7 @@ namespace DotaGuideToGreatness.DAL.Interfaces
 
         Result Update(T entity);
 
-        Task<Result<T>> GetById(int id);
+        Task<Result<T>> GetById(long id);
         Task<Result<IList<T>>> List(Expression<Func<T, bool>> expression = null,
                             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
                             List<string> includes = null);

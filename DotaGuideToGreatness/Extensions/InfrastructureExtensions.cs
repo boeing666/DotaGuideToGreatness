@@ -19,10 +19,11 @@ namespace DotaGuideToGreatness.Extensions
         {
             services.AddDbContext<DotaDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("DatabaseConnection"));
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
 
             services.AddScoped<Func<DotaDbContext>>((provider) => provider.GetService<DotaDbContext>);
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;
         }

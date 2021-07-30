@@ -9,8 +9,9 @@ namespace DotaGuideToGreatness.Domain.Enums
     public enum StatusCodes
     {
         Success = 200,
-        NotFound = 404,
         GeneralError = 400,
+        FailedToSave = 401,
+        NotFound = 404,
         ServerException = 500
     }
 }

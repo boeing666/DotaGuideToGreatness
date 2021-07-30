@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DotaGuideToGreatness.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,9 @@ namespace DotaGuideToGreatness.DAL
 {
     public class DotaDbContext : DbContext
     {
+        public DbSet<Item> Items { get; set; }
+
+        public DotaDbContext(DbContextOptions<DotaDbContext> options) : base(options) { }
 
     }
 }

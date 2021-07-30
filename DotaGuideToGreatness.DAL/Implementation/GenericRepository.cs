@@ -69,9 +69,12 @@ namespace DotaGuideToGreatness.DAL.Implementation
             return Result.Success();
         }
 
-        public async Task<Result<T>> GetById(int id)
+        public async Task<Result<T>> GetById(long id)
         {
             var foundEntity = await DbSet.FindAsync(id);
+
+            if(foundEntity == null)
+                return Result<T>.Failed(StatusCodes.NotFound);
 
             //TODO გასატესტია ესა FindAsync vs FirsOrDefault; FindAsync მუშაობს Primary Key-ზე.
 

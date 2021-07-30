@@ -24,6 +24,11 @@ namespace DotaGuideToGreatness.Domain
         {
             return new Result<T> { StatusCode = statusCode, Message = message };
         }
+
+        public static Result<T> Failed(StatusCodes statusCode)
+        {
+            return new Result<T> { StatusCode = statusCode, Message = statusCode.ToString() };
+        }
     }
 
     public class Result
